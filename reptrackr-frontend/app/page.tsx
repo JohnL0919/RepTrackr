@@ -5,7 +5,7 @@ import { Button } from "@mui/material";
 export default function Home() {
   return (
     <>
-      <header className="flex flex-row justify-evenly items-center p-[2vw] bg-black text-white w-full">
+      <header className="flex flex-row justify-evenly items-center p-[2vw]  w-full">
         {/* ------------------------------ Title ------------------------------  */}
         <h1 className="text-4xl font-bold px-8">RepTrackr</h1>
         {/* ------------------------------ Nav ------------------------------  */}
