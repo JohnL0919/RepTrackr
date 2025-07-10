@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </header>
       {/* ------------------------------------------------ Body Content ---------------------------------------------------  */}
-      <div className="flex flex-col items-center text-center p-[5vh] relative">
+      <div className="flex flex-col items-center text-center p-[5vh] relative h-[90vh]">
         <motion.div className="absolute inset-0 bg-gradient-to-b from-indigo-600/40 to-purple-600/60 rounded-3xl blur-2xl" />
         <motion.div
           className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent rounded-3xl blur-lg"
