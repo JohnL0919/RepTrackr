@@ -28,10 +28,21 @@ export default {
           "0%": { transform: "translateY(20px)", opacity: "0" },
           "100%": { transform: "translateY(0px)", opacity: "1" },
         },
+        "pulse-glow": {
+          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+        },
+        "color-shift": {
+          "0%": { filter: "hue-rotate(0deg)" },
+          "50%": { filter: "hue-rotate(30deg)" },
+          "100%": { filter: "hue-rotate(0deg)" },
+        },
       },
       animation: {
         "slide-down": "slide-down 0.2s ease-in",
         "slide-up": "slide-up 0.2s ease-out",
+        pulse: "pulse-glow 5s ease-in-out infinite",
+        "color-shift": "color-shift 8s infinite",
       },
     },
   },
