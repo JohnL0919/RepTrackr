@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <main className="bg-black min-h-screen">
-      {/* ------------------------------ Header ------------------------------  */}
+      {/* ------------------------------------------------- Header -----------------------------------------------------  */}
       <header className="flex flex-row justify-evenly items-center p-[2vw] w-full fixed top-0 left-0 right-0 bg-black z-50">
-        {/* ------------------------------ Title ------------------------------  */}
+        {/* ----------------------- Title -------------------  */}
         <h1 className="text-4xl font-bold px-8">RepTrackr</h1>
-        {/* ------------------------------ Nav ------------------------------  */}
+        {/* ------------------------ Nav --------------------  */}
 
         <nav className="flex items-center gap-10 px-8 text-gray-300 font-medium">
           <Link
@@ -25,7 +25,7 @@ export default function Home() {
             Progress
           </Link>
         </nav>
-        {/* ------------------------------ Login/Logout ------------------------------  */}
+        {/* -------------------- Login/Logout ----------------  */}
 
         <div className="flex items-center gap-4 px-8">
           <button className="text-gray-300 hover:text-white text-base bg-transparent transition-colors">
@@ -37,7 +37,7 @@ export default function Home() {
           </button>
         </div>
       </header>
-      {/* ------------------------------ Body Content ------------------------------  */}
+      {/* ------------------------------------------------ Body Content ---------------------------------------------------  */}
       <div className="flex flex-col items-center text-center p-[5vh] relative">
         <motion.div className="absolute inset-0 bg-gradient-to-b from-indigo-600/40 to-purple-600/60 rounded-3xl blur-2xl" />
         <motion.div
@@ -56,7 +56,7 @@ export default function Home() {
           }}
         />
 
-        {/* ------------------------------ Headings ------------------------------  */}
+        {/* ------------------------ Headings ------------------  */}
         <motion.div
           className="pt-24 text-6xl font-bold px-8 flex w-[40vw] pb-[5vh] relative z-10 text-white"
           initial={{ opacity: 0, y: 20 }}
