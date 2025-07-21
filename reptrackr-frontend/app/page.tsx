@@ -58,7 +58,7 @@ export default function Home() {
 
         {/* ------------------------ Headings 1------------------  */}
         <motion.div
-          className="pt-[50vh] text-7xl font-bold px-8 flex  pb-[5vh] relative z-10 text-white"
+          className="pt-[70vh] text-7xl font-bold px-8 flex  pb-[3vh] relative z-10 text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
