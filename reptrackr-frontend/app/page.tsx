@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Card, CardContent, Typography } from "@mui/material";
 
 export default function Home() {
   return (
@@ -127,30 +128,41 @@ export default function Home() {
           analysis, and beautiful progress visualization. Built for athletes who
           demand excellence.
         </motion.span>
-
-        <motion.div
-          className="flex flex-row gap-6 mt-8 relative justify-center items-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-        >
-          <motion.button
-            className="bg-gradient-to-r from-indigo-500 to-pink-500 hover:from-indigo-600 hover:to-pink-600 text-white font-medium text-base rounded-xl px-8 py-3 shadow-md hover:shadow-lg transition-all duration-200 ease-in-out cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => window.open("/dashboard", "_self")}
-          >
-            Start Your Free Trial
-          </motion.button>
-
-          <motion.button
-            className="border border-white/30 bg-black/20 backdrop-blur-sm text-white font-medium text-base rounded-xl px-8 py-3 shadow-md hover:shadow-lg hover:bg-white/10 transition-all duration-200 ease-in-out cursor-pointer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => window.open("/workouts", "_self")}
-          >
-            Watch a Demo{" "}
-          </motion.button>
+        {/* ------------------------ Feature Cards------------------  */}
+        <motion.div className="flex flex-row gap-5">
+          <Card>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Smart Workout Tracking
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                Intuitive logging with intelligent suggestions, automatic
+                progression tracking, and seamless gym floor experience.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                AI Form Analysis
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                Upload workout videos for instant AI-powered form feedback and
+                technique improvement recommendations.
+              </Typography>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Advanced Analytics
+              </Typography>
+              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                Beautiful charts and insights that reveal patterns, predict
+                plateaus, and optimize your training.
+              </Typography>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </main>
