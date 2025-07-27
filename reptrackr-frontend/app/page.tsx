@@ -2,6 +2,135 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+// Icon components
+const WorkoutIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M4 19h16v2H4zM4 3h16v2H4zM21 11.5c0 1.933-1.567 3.5-3.5 3.5S14 13.433 14 11.5 15.567 8 17.5 8s3.5 1.567 3.5 3.5zm-2 0c0-.827-.673-1.5-1.5-1.5S16 10.673 16 11.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5zM6.5 8C8.433 8 10 9.567 10 11.5S8.433 15 6.5 15 3 13.433 3 11.5 4.567 8 6.5 8zm0 2c-.827 0-1.5.673-1.5 1.5S5.673 13 6.5 13 8 12.327 8 11.5 7.327 10 6.5 10z" />
+  </svg>
+);
+
+const FormIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zm-1 2H4v14h16V5zM8 7v10H6V7h2zm6 0v10h-2V7h2zm6 0v10h-2V7h2z" />
+  </svg>
+);
+
+const AnalyticsIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M5 3v16h16v2H3V3h2zm15.293 3.293l1.414 1.414L16 13.414l-3-2.999-4.293 4.292-1.414-1.414L13 7.586l3 2.999 4.293-4.292z" />
+  </svg>
+);
+
+const ScheduleIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z" />
+  </svg>
+);
+
+const NutritionIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M20 10.9999V7.99994C20 7.44766 19.5523 6.99994 19 6.99994H5C4.44772 6.99994 4 7.44766 4 7.99994V10.9999H20ZM4 12.9999V19.9999C4 20.5522 4.44772 20.9999 5 20.9999H19C19.5523 20.9999 20 20.5522 20 19.9999V12.9999H4ZM2 7.99994C2 6.34309 3.34315 4.99994 5 4.99994H19C20.6569 4.99994 22 6.34309 22 7.99994V19.9999C22 21.6568 20.6569 22.9999 19 22.9999H5C3.34315 22.9999 2 21.6568 2 19.9999V7.99994ZM11 15.9999H13V17.9999H11V15.9999Z" />
+  </svg>
+);
+
+const CommunityIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11ZM18.2418 14.3465C20.5 15.0986 22 17.2785 22 19.8C22 20.42 21.8433 21.0023 21.5611 21.5191C21.2789 22.036 20.8708 22.465 20.3791 22.7706L19.2139 21.1067C19.4358 20.9267 19.6124 20.6985 19.7264 20.4402C19.8404 20.1819 19.8882 19.9015 19.8657 19.6224C19.7553 18.4788 18.7886 17.5591 17.5 17.5C17.0669 17.5 16.6588 17.6199 16.3093 17.8322L15.2297 16.1409C16.1423 15.5396 17.1718 15.0827 18.2418 14.3465ZM17.5 11C18.8807 11 20 12.1193 20 13.5C20 14.8807 18.8807 16 17.5 16C16.1193 16 15 14.8807 15 13.5C15 12.1193 16.1193 11 17.5 11ZM17.5 13C17.2239 13 17 13.2239 17 13.5C17 13.7761 17.2239 14 17.5 14C17.7761 14 18 13.7761 18 13.5C18 13.2239 17.7761 13 17.5 13Z" />
+  </svg>
+);
+
+const features = [
+  {
+    title: "Smart Workout Tracking",
+    description:
+      "Intuitive logging with intelligent suggestions, automatic progression tracking, and seamless gym floor experience.",
+    Icon: WorkoutIcon,
+    gradient: "from-indigo-900/30 to-indigo-700/20",
+    iconColor: "text-indigo-400",
+    hoverShadow: "rgba(76, 29, 149, 0.3)",
+    delay: 0.8,
+  },
+  {
+    title: "AI Form Analysis",
+    description:
+      "Upload workout videos for instant AI-powered form feedback and technique improvement recommendations.",
+    Icon: FormIcon,
+    gradient: "from-purple-900/30 to-purple-700/20",
+    iconColor: "text-purple-400",
+    hoverShadow: "rgba(126, 34, 206, 0.3)",
+    delay: 1.0,
+  },
+  {
+    title: "Advanced Analytics",
+    description:
+      "Beautiful charts and insights that reveal patterns, predict plateaus, and optimize your training.",
+    Icon: AnalyticsIcon,
+    gradient: "from-pink-900/30 to-pink-700/20",
+    iconColor: "text-pink-400",
+    hoverShadow: "rgba(190, 24, 93, 0.3)",
+    delay: 1.2,
+  },
+  {
+    title: "Workout Scheduling",
+    description:
+      "Plan and schedule your workouts with smart reminders and calendar integration to maintain consistency and track adherence.",
+    Icon: ScheduleIcon,
+    gradient: "from-blue-900/30 to-blue-700/20",
+    iconColor: "text-blue-400",
+    hoverShadow: "rgba(30, 64, 175, 0.3)",
+    delay: 1.3,
+  },
+  {
+    title: "Nutrition Tracking",
+    description:
+      "Log meals, track macros, and monitor caloric intake with customizable nutrition plans to fuel optimal performance and recovery.",
+    Icon: NutritionIcon,
+    gradient: "from-green-900/30 to-green-700/20",
+    iconColor: "text-green-400",
+    hoverShadow: "rgba(6, 78, 59, 0.3)",
+    delay: 1.4,
+  },
+  {
+    title: "Community & Sharing",
+    description:
+      "Connect with fitness enthusiasts, share achievements, participate in challenges, and get motivated by a supportive community.",
+    Icon: CommunityIcon,
+    gradient: "from-amber-900/30 to-amber-700/20",
+    iconColor: "text-amber-400",
+    hoverShadow: "rgba(146, 64, 14, 0.3)",
+    delay: 1.5,
+  },
+];
 export default function Home() {
   return (
     <main className="bg-black min-h-screen">
@@ -128,206 +257,40 @@ export default function Home() {
           demand excellence.
         </motion.span>
         {/* ------------------------ Feature Cards------------------  */}
+
         <motion.div
           className="flex flex-wrap justify-center gap-8 pt-16 w-full max-w-7xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          {/* First Row */}
-          <motion.div
-            className="bg-gradient-to-br from-indigo-900/30 to-indigo-700/20 backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(76, 29, 149, 0.3)",
-              transition: { duration: 0.2 },
-            }}
-          >
+          {features.map((feat) => (
             <motion.div
-              className="text-indigo-400 mb-2"
-              whileHover={{ scale: 1.05 }}
+              key={feat.title}
+              className={`bg-gradient-to-br ${feat.gradient} backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80`}
+              initial={{ y: 50 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.5, delay: feat.delay }}
+              whileHover={{
+                y: -5,
+                boxShadow: `0 20px 25px -5px ${feat.hoverShadow}`,
+                transition: { duration: 0.2 },
+              }}
             >
-              <svg
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
+              <motion.div
+                className={`${feat.iconColor} mb-2`}
+                whileHover={{ scale: 1.05 }}
               >
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-2V9h-2V7h4v10z" />
-              </svg>
+                <feat.Icon className="w-10 h-10" />
+              </motion.div>
+              <h3 className="text-xl font-bold text-white mb-2">
+                {feat.title}
+              </h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                {feat.description}
+              </p>
             </motion.div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Smart Workout Tracking
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Intuitive logging with intelligent suggestions, automatic
-              progression tracking, and seamless gym floor experience.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gradient-to-br from-purple-900/30 to-purple-700/20 backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 1.0 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(126, 34, 206, 0.3)",
-              transition: { duration: 0.2 },
-            }}
-          >
-            <motion.div
-              className="text-purple-400 mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M12 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z" />
-              </svg>
-            </motion.div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              AI Form Analysis
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Upload workout videos for instant AI-powered form feedback and
-              technique improvement recommendations.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gradient-to-br from-pink-900/30 to-pink-700/20 backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(190, 24, 93, 0.3)",
-              transition: { duration: 0.2 },
-            }}
-          >
-            <motion.div
-              className="text-pink-400 mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z" />
-              </svg>
-            </motion.div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Advanced Analytics
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Beautiful charts and insights that reveal patterns, predict
-              plateaus, and optimize your training.
-            </p>
-          </motion.div>
-
-          {/* Second Row */}
-          <motion.div
-            className="bg-gradient-to-br from-blue-900/30 to-blue-700/20 backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(30, 64, 175, 0.3)",
-              transition: { duration: 0.2 },
-            }}
-          >
-            <motion.div
-              className="text-blue-400 mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
-              </svg>
-            </motion.div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Workout Scheduling
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Plan and schedule your workouts with smart reminders and calendar
-              integration to maintain consistency and track adherence.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gradient-to-br from-green-900/30 to-green-700/20 backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 1.4 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(6, 78, 59, 0.3)",
-              transition: { duration: 0.2 },
-            }}
-          >
-            <motion.div
-              className="text-green-400 mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H4V5h16v14zM6 10h2v2H6zm0 4h8v2H6zm10 0h2v2h-2zm-6-4h8v2h-8z" />
-              </svg>
-            </motion.div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Nutrition Tracking
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Log meals, track macros, and monitor caloric intake with
-              customizable nutrition plans to fuel optimal performance and
-              recovery.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="bg-gradient-to-br from-amber-900/30 to-amber-700/20 backdrop-blur-md rounded-2xl overflow-hidden p-6 shadow-xl border border-white/10 flex flex-col w-80"
-            initial={{ y: 50 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, delay: 1.5 }}
-            whileHover={{
-              y: -5,
-              boxShadow: "0 20px 25px -5px rgba(146, 64, 14, 0.3)",
-              transition: { duration: 0.2 },
-            }}
-          >
-            <motion.div
-              className="text-amber-400 mb-2"
-              whileHover={{ scale: 1.05 }}
-            >
-              <svg
-                className="w-10 h-10"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
-              </svg>
-            </motion.div>
-            <h3 className="text-xl font-bold text-white mb-2">
-              Community & Sharing
-            </h3>
-            <p className="text-white/70 text-sm leading-relaxed">
-              Connect with fitness enthusiasts, share achievements, participate
-              in challenges, and get motivated by a supportive community.
-            </p>
-          </motion.div>
+          ))}
         </motion.div>
       </div>
     </main>
