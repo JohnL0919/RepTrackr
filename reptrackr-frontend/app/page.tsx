@@ -6,66 +6,108 @@ import { motion } from "framer-motion";
 const WorkoutIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     {...props}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-9"
   >
-    <path d="M4 19h16v2H4zM4 3h16v2H4zM21 11.5c0 1.933-1.567 3.5-3.5 3.5S14 13.433 14 11.5 15.567 8 17.5 8s3.5 1.567 3.5 3.5zm-2 0c0-.827-.673-1.5-1.5-1.5S16 10.673 16 11.5s.673 1.5 1.5 1.5 1.5-.673 1.5-1.5zM6.5 8C8.433 8 10 9.567 10 11.5S8.433 15 6.5 15 3 13.433 3 11.5 4.567 8 6.5 8zm0 2c-.827 0-1.5.673-1.5 1.5S5.673 13 6.5 13 8 12.327 8 11.5 7.327 10 6.5 10z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.5 3c.967 2.78 1.5 5.817 1.5 9s-.533 6.22-1.5 9M8.25 8.885l1.444-.89a.75.75 0 0 1 1.105.402l2.402 7.206a.75.75 0 0 0 1.104.401l1.445-.889m-8.25.75.213.09a1.687 1.687 0 0 0 2.062-.617l4.45-6.676a1.688 1.688 0 0 1 2.062-.618l.213.09"
+    />
   </svg>
 );
 
 const FormIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     {...props}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-9"
   >
-    <path d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zm-1 2H4v14h16V5zM8 7v10H6V7h2zm6 0v10h-2V7h2zm6 0v10h-2V7h2z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+    />
   </svg>
 );
 
 const AnalyticsIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     {...props}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-9"
   >
-    <path d="M5 3v16h16v2H3V3h2zm15.293 3.293l1.414 1.414L16 13.414l-3-2.999-4.293 4.292-1.414-1.414L13 7.586l3 2.999 4.293-4.292z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+    />
   </svg>
 );
 
 const ScheduleIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     {...props}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-9"
   >
-    <path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+    />
   </svg>
 );
 
 const NutritionIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     {...props}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-9"
   >
-    <path d="M20 10.9999V7.99994C20 7.44766 19.5523 6.99994 19 6.99994H5C4.44772 6.99994 4 7.44766 4 7.99994V10.9999H20ZM4 12.9999V19.9999C4 20.5522 4.44772 20.9999 5 20.9999H19C19.5523 20.9999 20 20.5522 20 19.9999V12.9999H4ZM2 7.99994C2 6.34309 3.34315 4.99994 5 4.99994H19C20.6569 4.99994 22 6.34309 22 7.99994V19.9999C22 21.6568 20.6569 22.9999 19 22.9999H5C3.34315 22.9999 2 21.6568 2 19.9999V7.99994ZM11 15.9999H13V17.9999H11V15.9999Z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z"
+    />
   </svg>
 );
 
 const CommunityIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
+    fill="none"
     {...props}
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="size-9"
   >
-    <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H16C16 18.6863 13.3137 16 10 16C6.68629 16 4 18.6863 4 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM10 11C12.21 11 14 9.21 14 7C14 4.79 12.21 3 10 3C7.79 3 6 4.79 6 7C6 9.21 7.79 11 10 11ZM18.2418 14.3465C20.5 15.0986 22 17.2785 22 19.8C22 20.42 21.8433 21.0023 21.5611 21.5191C21.2789 22.036 20.8708 22.465 20.3791 22.7706L19.2139 21.1067C19.4358 20.9267 19.6124 20.6985 19.7264 20.4402C19.8404 20.1819 19.8882 19.9015 19.8657 19.6224C19.7553 18.4788 18.7886 17.5591 17.5 17.5C17.0669 17.5 16.6588 17.6199 16.3093 17.8322L15.2297 16.1409C16.1423 15.5396 17.1718 15.0827 18.2418 14.3465ZM17.5 11C18.8807 11 20 12.1193 20 13.5C20 14.8807 18.8807 16 17.5 16C16.1193 16 15 14.8807 15 13.5C15 12.1193 16.1193 11 17.5 11ZM17.5 13C17.2239 13 17 13.2239 17 13.5C17 13.7761 17.2239 14 17.5 14C17.7761 14 18 13.7761 18 13.5C18 13.2239 17.7761 13 17.5 13Z" />
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+    />
   </svg>
 );
 
@@ -135,7 +177,7 @@ export default function Home() {
   return (
     <main className="bg-black min-h-screen">
       {/* ------------------------------------------------- Header -----------------------------------------------------  */}
-      <header className="flex flex-row justify-evenly items-center p-[2vw] w-full fixed top-0 left-0 right-0 bg-black z-50">
+      <header className="flex flex-row justify-evenly items-center p-[2vw] w-full  fixed top-0 left-0 right-0 bg-black z-50">
         {/* ----------------------- Title -------------------  */}
         <h1 className="text-4xl font-bold px-8">RepTrackr</h1>
         {/* ------------------------ Nav --------------------  */}
@@ -187,7 +229,7 @@ export default function Home() {
 
         {/* ------------------------ Headings 1------------------  */}
         <motion.div
-          className="pt-[70vh] text-7xl font-bold px-8 flex  pb-[3vh] relative z-10 text-white"
+          className="pt-[120vh] text-7xl font-bold px-8 flex  pb-[3vh] relative z-10 text-white"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
